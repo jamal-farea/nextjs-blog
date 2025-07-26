@@ -1,5 +1,5 @@
 ---
-name: website-ui-multibranches
+name: Hamoud
 role: related
 bio: bio
 picture: /assets/events/globe.svg
