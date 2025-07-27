@@ -1,5 +1,6 @@
 export type Event = {
   slug: string;
+  language: string;
   title: string;
   description: string;
   date: string;

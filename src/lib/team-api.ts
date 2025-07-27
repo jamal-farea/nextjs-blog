@@ -25,4 +25,13 @@ export function getAllTeamMembers(): TeamMember[] {
     // sort team members by name
     .sort((member1, member2) => member1.name.localeCompare(member2.name));
   return teamMembers;
+}
+
+export function getTeamMembersByLanguage(language: string): TeamMember[] {
+  return getAllTeamMembers().filter(member => member.language === language);
+}
+
+export function getTeamMemberBySlugAndLanguage(slug: string, language: string) {
+  const member = getTeamMemberBySlug(slug);
+  return member.language === language ? member : null;
 } 

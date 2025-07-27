@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LanguageSwitcher from "./language-switcher";
 
 const Header = () => {
   return (
@@ -10,25 +11,28 @@ const Header = () => {
           </Link>
           .
         </h2>
-        <nav className="mt-4 md:mt-0">
-          <ul className="flex space-x-8">
-            <li>
-              <Link href="/" className="hover:underline text-gray-600 hover:text-black transition-colors">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/team" className="hover:underline text-gray-600 hover:text-black transition-colors">
-                Team
-              </Link>
-            </li>
-            <li>
-              <Link href="/events" className="hover:underline text-gray-600 hover:text-black transition-colors">
-                Events
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="flex items-center space-x-8 mt-4 md:mt-0">
+          <nav>
+            <ul className="flex space-x-8">
+              <li>
+                <Link href="/" className="hover:underline text-gray-600 hover:text-black transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className="hover:underline text-gray-600 hover:text-black transition-colors">
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/events" className="hover:underline text-gray-600 hover:text-black transition-colors">
+                  Events
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <LanguageSwitcher />
+        </div>
       </div>
     </header>
   );

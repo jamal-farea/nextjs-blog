@@ -26,3 +26,12 @@ export function getAllPosts(): Post[] {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }
+
+export function getPostsByLanguage(language: string): Post[] {
+  return getAllPosts().filter(post => post.language === language);
+}
+
+export function getPostBySlugAndLanguage(slug: string, language: string) {
+  const post = getPostBySlug(slug);
+  return post.language === language ? post : null;
+}

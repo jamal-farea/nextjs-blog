@@ -33,4 +33,21 @@ export function getUpcomingEvents(): Event[] {
 
 export function getPastEvents(): Event[] {
   return getAllEvents().filter(event => !event.isUpcoming);
+}
+
+export function getEventsByLanguage(language: string): Event[] {
+  return getAllEvents().filter(event => event.language === language);
+}
+
+export function getUpcomingEventsByLanguage(language: string): Event[] {
+  return getUpcomingEvents().filter(event => event.language === language);
+}
+
+export function getPastEventsByLanguage(language: string): Event[] {
+  return getPastEvents().filter(event => event.language === language);
+}
+
+export function getEventBySlugAndLanguage(slug: string, language: string) {
+  const event = getEventBySlug(slug);
+  return event.language === language ? event : null;
 } 

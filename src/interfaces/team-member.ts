@@ -1,5 +1,6 @@
 export type TeamMember = {
   slug: string;
+  language: string;
   name: string;
   role: string;
   bio: string;

@@ -8,8 +8,9 @@ content:
     type: collection
     path: _posts
     view:
-      fields: [ coverImage, title, date ]
+      fields: [ coverImage, title, date, language ]
     fields:
+      - { name: language, label: Language, type: select, options: [ "en", "ar", "fr", "es" ], required: true }
       - { name: title, label: Title, type: string, required: true }
       - { name: excerpt, label: Excerpt, type: string }
       - { name: coverImage, label: Cover image, type: image }
@@ -32,8 +33,9 @@ content:
     type: collection
     path: _team
     view:
-      fields: [ name, role, picture ]
+      fields: [ name, role, picture, language ]
     fields:
+      - { name: language, label: Language, type: select, options: [ "en", "ar", "fr", "es" ], required: true }
       - { name: name, label: Name, type: string, required: true }
       - { name: role, label: Role/Position, type: string, required: true }
       - { name: bio, label: Bio, type: text }
@@ -49,8 +51,9 @@ content:
     type: collection
     path: _events
     view:
-      fields: [ title, date, type, isUpcoming ]
+      fields: [ title, date, type, isUpcoming, language ]
     fields:
+      - { name: language, label: Language, type: select, options: [ "en", "ar", "fr", "es" ], required: true }
       - { name: title, label: Event Title, type: string, required: true }
       - { name: description, label: Description, type: text }
       - { name: date, label: Start Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
